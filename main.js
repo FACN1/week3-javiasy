@@ -1,5 +1,4 @@
 var ListenerModule = (function(){
-
     function initBookListener(){
         var bookListNode = document.getElementById("bookList");
         bookListNode.childNodes.forEach(function(childNode){
@@ -7,5 +6,5 @@ var ListenerModule = (function(){
                 console.log(childNode.getAttribute("data-bookId"));
             })
         })
-    }(); //only run after parallel functions maybe
+    }(); // only run after parallel functions maybe
 })()
