@@ -12,3 +12,28 @@
 ## Site design
 
 ## Architecture
+
+##### File structure:
+- index.html
+- main.js
+- style.css
+- tests/
+    - tests.js
+    - spec.html
+    - fixtures/
+        - MockData.js
+
+##### Module structure:
+<!-- - MainModule
+    - var extractData - pure functions
+        - .getBooks... -->
+- ListenerModule
+    - event listeners
+- APIRequestModule
+    - make API requests here
+- ExtractDataModule
+    - pseudo-code: var extractData {gameOfThrones: functions, movieDatabase: functions}
+- RenderDOMModule
+    - Functions
+
+##### HTML structure:
