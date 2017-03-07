@@ -43,6 +43,10 @@ table {
 }
 
 /* after resest*/
+body{
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+}
 
 .container {
     margin:0 auto;
@@ -51,9 +55,14 @@ table {
 
 header, main, section {
     min-height: 100vh;
-    
+
 }
 
 section {
     display: none;
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2rem;
 }
