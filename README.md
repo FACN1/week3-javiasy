@@ -22,9 +22,6 @@
         - MockData.js
 
 ##### Module structure:
-<!-- - MainModule
-    - var extractData - pure functions
-        - .getBooks... -->
 - ListenerModule
     - event listeners
 - APIRequestModule
@@ -32,7 +29,7 @@
 - ExtractDataModule
     - pseudo-code: var extractData {gameOfThrones: functions, movieDatabase: functions}
 - RenderDOMModule
-    - Functions
+    - render the data as elements on the DOM
 
 ##### HTML structure:
 
@@ -40,7 +37,7 @@
 #### A bit of psuedo code:
 click the book button:
 
-- make request to GOT API for character 
+- make request to GOT API for character
 
 - list request FUNCTION
 
