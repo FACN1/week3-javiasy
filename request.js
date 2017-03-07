@@ -17,6 +17,11 @@ var RequestModule = (function() {
         makeRequest(url);
     }
 
+    // build a movieDB request for each actor
+    function buildRequest_actorInfo(actorName) {
+
+    }
+
     // make these accessible outside the module
     return {
         buildRequest_GOTBooks: buildRequest_GOTBooks
