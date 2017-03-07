@@ -78,3 +78,22 @@ header h1 {
     padding-top: 50%;
     padding-bottom: 15%;
 }
+
+main {
+    box-sizing: border-box;
+    background: #718164;
+}
+
+main li{
+    text-align: center;
+    padding: 7vh 1%;
+    display: block;
+    border: 1px ridge #F2F2F2;
+}
+
+main a {
+    font-size: 1.65rem;
+    color: #F2F2F2;
+    text-decoration: none;
+
+}
