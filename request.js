@@ -19,7 +19,7 @@ var RequestModule = (function() {
 
     // build a movieDB request for each actor
     function buildRequest_actorInfo(actorName) {
-
+        var myKey = config.theMovieDBKey;
     }
 
     // make these accessible outside the module
