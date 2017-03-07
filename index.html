@@ -3,21 +3,25 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
         <title>Javiasy - API Project</title>
     </head>
     <body>
-        <div id="bookWrapper">
+        <header>
+            <h1>GOT Character Lookup</h1>
+        </header>
+        <main id="bookWrapper">
             <ul id="bookList">
-                <li bookId="1"><a href="#">A Game of Thrones</a></li>
-                <li bookId="2"><a href="#">A Clash of Kings</a></li>
-                <li bookId="3"><a href="#">A Storm of Swords</a></li>
-                <li bookId="4"><a href="#">A Feast For Crows</a></li>
-                <li bookId="5"><a href="#">A Dance with Dragons</a></li>
+                <li data-bookId="1"><a href="#">A Game of Thrones</a></li>
+                <li data-bookId="2"><a href="#">A Clash of Kings</a></li>
+                <li data-bookId="3"><a href="#">A Storm of Swords</a></li>
+                <li data-bookId="4"><a href="#">A Feast For Crows</a></li>
+                <li data-bookId="5"><a href="#">A Dance with Dragons</a></li>
             </ul>
-        </div>
-        <div id="characterWrapper">
+        </main>
+        <section id="characterWrapper">
             <ul id="characterList"></ul>
-        </div>
+        </section>
     </body>
     <script type="text/javascript" src="main.js"></script>
 </html>
