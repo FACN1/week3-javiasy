@@ -35,3 +35,33 @@
     - Functions
 
 ##### HTML structure:
+
+
+#### A bit of psuedo code:
+click the book button:
+
+- make request to GOT API for character 
+
+- list request FUNCTION
+
+ - get list of main characters   EXTRACT DATA FUNCTION
+
+
+- go through each character:  EXTRACT DATA FUNCTION
+
+  - make new request to GOT API to get
+   actor MAKE REQUEST FUNCTION
+
+  - get actor  EXTRACT DATA
+
+  - make a request to DB to get link to page (and image) MAKEREQUEST
+
+  - get link EXTRACT
+
+  - RENDER
+     - render a li element with the character/actor/link
+     - append li to a ul
+
+- RENDER
+- replace old ul with new ul
+- scroll page down to ul
