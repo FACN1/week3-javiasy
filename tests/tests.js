@@ -50,7 +50,7 @@ QUnit.test("put text here", function(assert) {
 /* --- ExtractDataModule.movieDB --- */
 
 QUnit.test('Test getActorId function', function(assert) {
-    var result = ExtractDataModule.movieDB.getActorId(mockData.actor1.results[0]);
+    var result = ExtractDataModule.movieDB.getActorId(mockData.actor1);
     var expected = mockData.actor1.results[0].id;
     assert.equal(result, expected, 'getActorId returns correct id');
 });

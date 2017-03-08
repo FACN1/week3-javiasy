@@ -29,7 +29,7 @@ var ExtractDataModule = (function() {
     var movieDB = {
         // takes name search result output from movieDB request, and returns id
         getActorId: function(data) {
-            return data.id;
+            return data.results[0].id;
         },
 
         // takes actor id output from movieDB request, and returns IMDb link
