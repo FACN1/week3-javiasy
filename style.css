@@ -62,7 +62,7 @@ header, main, section {
 }
 
 section {
-    display: none;
+    /*display: none;*/
 }
 
 header {
