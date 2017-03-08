@@ -1,12 +1,22 @@
 var ListenerModule = (function(){
 
-    var initBookListener = function() {
+    // Callback function is put into below function - this allows tests, or other modules to interact with the eventlistener and get the ids of clicked items.
+    var initBookListener = function(callback) {
         var bookListNode = document.getElementById("bookList");
         bookListNode.childNodes.forEach(function(childNode){
-            childNode.addEventListener("click",function(){
-                console.log(childNode.getAttribute("data-bookId"));
+            childNode.addEventListener("click",function(event){
+                event.preventDefault();
+                callback(childNode);
             });
         });
-    }(); //only run after parallel functions maybe
-    // initBookListener();
+    }; // only run after parallel functions maybe
+
+    // Initialise eventListener to log id.
+    initBookListener(function(bookNode) {
+        console.log(bookNode.getAttribute("data-bookId"));
+    });
+
+    return {
+        initBookListener: initBookListener // make initBookListener public - so function can be put into callback;
+    }
 })();
