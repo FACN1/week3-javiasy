@@ -23,7 +23,13 @@ var ListenerModule = (function(){
 
 var ExtractDataModule = (function() {
     var gameOfThrones = {
-        // functions go here: separated by commas
+        extractCharacters: function(response){
+            return response.povCharacters;
+        },
+
+        extractActors: function(response){
+            return response.playedBy;
+        }
     }
 
     var movieDB = {
