@@ -5,7 +5,10 @@ var ListenerModule = (function(){
         var bookListNode = document.getElementById("bookList");
         bookListNode.childNodes.forEach(function(childNode){
             childNode.addEventListener("click",function(event){
-                event.preventDefault();
+                // event.preventDefault();
+                setTimeout(function() {
+                    document.getElementById('characterList').scrollIntoView();
+                }, 2000);
                 callback(childNode);
             });
         });
