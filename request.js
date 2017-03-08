@@ -12,35 +12,32 @@ var RequestModule = (function() {
     }
 
     // build a request for each GoT book - to get a character list
-    function buildRequest_GOTBooks(bookNumber) {
+    function buildURL_GOTBooks(bookNumber) {
         var url = 'http://anapioficeandfire.com/api/books/' + bookNumber;
-        makeRequest(url);
+        return url;
     }
 
     // build a movieDB request for an actor - to get their id
-    function buildRequest_actorId(actorName) {
+    function buildURL_actorId(actorName) {
         // replace spaces in actorName with %20
-        actorName.replace(/\s/gi, '%20');
+        actorName = actorName.replace(/\s/gi, '%20');
 
-        // build URL
-        var myKey = config.theMovieDBKey;
-        var url = 'https://api.themoviedb.org/3/search/person?api_key=' + myKey + '&query=' + actorName;
-
-        // make the request
-        makeRequest(url);
+        // build and return URL
+        var url = 'https://api.themoviedb.org/3/search/person?api_key=' + config.theMovieDBKey + '&query=' + actorName;
+        return url;
     }
 
     // build a movieDB request for an actor id - to get more info
-    function buildRequest_actorInfo(actorId) {
-        var url = 'https://api.themoviedb.org/3/person/' + actorId + '?api_key=' + myKey;
-        makeRequest(url);
+    function buildURL_actorInfo(actorId) {
+        var url = 'https://api.themoviedb.org/3/person/' + actorId + '?api_key=' + config.theMovieDBKey;
+        return url;
     }
 
     // make these accessible outside the module
     return {
-        makeRequest: makeRequest;
-        buildRequest_GOTBooks: buildRequest_GOTBooks, // takes a book number
-        buildRequest_actorId: buildRequest_actorId, // takes an actor name
-        buildRequest_actorInfo: buildRequest_actorInfo // takes an actor id
+        makeRequest: makeRequest,
+        buildURL_GOTBooks: buildURL_GOTBooks, // takes a book number
+        buildURL_actorId: buildURL_actorId, // takes an actor name
+        buildURL_actorInfo: buildURL_actorInfo // takes an actor id
     }
 })();
