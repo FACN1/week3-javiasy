@@ -23,6 +23,6 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
     bookItemNode.click();
 
     assert.equal(bookClicked, true, "check bookClicked is true, after adding event listener + clicking it");
-})
+});
 
 /* --- END Event Listener tests --- */
