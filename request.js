@@ -14,7 +14,7 @@ var RequestModule = (function() {
     // build a request for each GoT book - to get a character list
     function buildRequest_GOTBooks(bookNumber) {
         var url = 'http://anapioficeandfire.com/api/books/' + bookNumber;
-        makeRequest(url);
+        return url;
     }
 
     // build a movieDB request for an actor - to get their id
@@ -27,13 +27,13 @@ var RequestModule = (function() {
         var url = 'https://api.themoviedb.org/3/search/person?api_key=' + myKey + '&query=' + actorName;
 
         // make the request
-        makeRequest(url);
+        return url;
     }
 
     // build a movieDB request for an actor id - to get more info
     function buildRequest_actorInfo(actorId) {
         var url = 'https://api.themoviedb.org/3/person/' + actorId + '?api_key=' + myKey;
-        makeRequest(url);
+        return url;
     }
 
     // make these accessible outside the module
