@@ -21,7 +21,6 @@ var ListenerModule = (function(){
     }
 })();
 
-
 var ExtractDataModule = (function() {
     var gameOfThrones = {
         // functions go here: separated by commas
