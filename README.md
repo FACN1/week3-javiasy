@@ -8,6 +8,7 @@
 - Wants to be able to use the site without waiting for page loading times (async / parallel functions)
 
 ## Site design
+![mobile-design](https://raw.githubusercontent.com/javiasy/week3-javiasy/master/designs/android-mobile-ui.png)
 
 ## Architecture
 
