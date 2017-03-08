@@ -49,8 +49,16 @@ QUnit.test("put text here", function(assert) {
 
 /* --- ExtractDataModule.movieDB --- */
 
-QUnit.test("put text here", function(assert) {
-    assert.equal(1, 1, "text goes here")
+QUnit.test('Test getActorId function', function(assert) {
+    var result = ExtractDataModule.movieDB.getActorId(mockData.actor1.results[0]);
+    var expected = mockData.actor1.results[0].id;
+    assert.equal(result, expected, 'getActorId returns correct id');
+});
+
+QUnit.test('Test getIMDBLink function', function(assert) {
+    var result = ExtractDataModule.movieDB.getIMDBLink(mockData.actorId);
+    var expected = 'http://imdb.com/name/' + mockData.actorId.imdb_id;
+    assert.equal(result, expected, 'getIMDBLink returns correct link');
 });
 
 /* --- END ExtractDataModule.movieDB tests --- */
