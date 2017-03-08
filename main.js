@@ -20,3 +20,19 @@ var ListenerModule = (function(){
         initBookListener: initBookListener // make initBookListener public - so function can be put into callback;
     }
 })();
+
+
+var ExtractDataModule = (function() {
+    var gameOfThrones = {
+        // functions go here: separated by commas
+    }
+
+    var movieDB = {
+        // functions go here: separated by commas
+    }
+
+    return {
+        gameOfThrones: gameOfThrones,
+        movieDB: movieDB
+    }
+})();
