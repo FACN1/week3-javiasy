@@ -10,10 +10,13 @@ var ListenerModule = (function(){
             });
         });
     }; // only run after parallel functions maybe
+
+    // Initialise eventListener to log id.
     initBookListener(function(bookNode) {
         console.log(bookNode.getAttribute("data-bookId"));
-    })
+    });
+
     return {
-        initBookListener: initBookListener
+        initBookListener: initBookListener // make initBookListener public - so function can be put into callback;
     }
 })();
