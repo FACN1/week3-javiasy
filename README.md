@@ -33,6 +33,21 @@
 
 ##### HTML structure:
 
+Have three sections, header, main and section.
+
+Header holds the static landing page, just title and info explaining the site.
+
+Main holds the book list, with event listeners on each book.
+
+Section holds the character list. This is unpopulated until a user clicks on a book, at which point API requests are made and the list is populated.This will either go below the book list or code use display:none and then have it appear after clicking the book.
+
+#### To do list for Wednesday:
+
+First lets do #19
+
+And then we can do the render functions #21
+
+And then we can implement everything.
 
 #### A bit of psuedo code:
 click the book button:
