@@ -51,13 +51,19 @@ body{
     color: #F2F2F2
 }
 
-header, main {
+a{
+    text-decoration: none;
+    color:#F2F2F2;
+
+}
+
+header {
     min-height: 100vh;
 }
 
 header {
+    margin:10px;
     background: #495241;
-    margin: 10px;
 }
 
 header p, header h1 {
@@ -88,14 +94,13 @@ main li:hover{
 main a {
     font-size: 1.65rem;
     color: #F2F2F2;
-    text-decoration: none;
-}
-
-section {
-    background-color: white;
-    padding: 20px 20px 10px 20px;
 }
 
 section li {
-    margin-bottom: 10px;
+    padding: 10px;
+    margin: 10px;
+    background: #8DA17D;
+    text-align: center;
+    display: block;
+    border: 1px ridge #F2F2F2;
 }
