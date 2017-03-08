@@ -38,6 +38,7 @@ var RequestModule = (function() {
 
     // make these accessible outside the module
     return {
+        makeRequest: makeRequest;
         buildRequest_GOTBooks: buildRequest_GOTBooks, // takes a book number
         buildRequest_actorId: buildRequest_actorId, // takes an actor name
         buildRequest_actorInfo: buildRequest_actorInfo // takes an actor id
