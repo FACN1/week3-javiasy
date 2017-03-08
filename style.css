@@ -46,26 +46,23 @@ table {
 body{
     font-size: 16px;
     font-family: 'Cinzel', serif;
-    margin: 0 16px;
+    padding: 10px;
     background: #495241;
     color: #F2F2F2
 }
 
-.container {
-    margin:0 auto;
-    max-width: 600px;
-}
+a{
+    text-decoration: none;
+    color:#F2F2F2;
 
-header, main, section {
-    min-height: 100vh;
-
-}
-
-section {
-    display: none;
 }
 
 header {
+    min-height: 100vh;
+}
+
+header {
+    margin:10px;
     background: #495241;
 }
 
@@ -79,21 +76,31 @@ header h1 {
     padding-bottom: 15%;
 }
 
-main {
-    box-sizing: border-box;
-    background: #718164;
-}
 
 main li{
+    background: #718164;
     text-align: center;
-    padding: 7vh 1%;
+    margin:20px 10px;
     display: block;
     border: 1px ridge #F2F2F2;
+    min-height: 55px;
+    padding:10px;
+}
+
+main li:hover{
+    cursor:pointer;
 }
 
 main a {
     font-size: 1.65rem;
     color: #F2F2F2;
-    text-decoration: none;
+}
 
+section li {
+    padding: 10px;
+    margin: 10px;
+    background: #8DA17D;
+    text-align: center;
+    display: block;
+    border: 1px ridge #F2F2F2;
 }

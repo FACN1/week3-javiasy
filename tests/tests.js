@@ -39,32 +39,51 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
 
 /* --- END Event Listener tests --- */
 
-/* --- ExtractDataModule.gameOfThrones --- */
-
-QUnit.test("testing game of throne functions", function(assert) {
-    var characterFunc = ExtractDataModule.gameOfThrones.extractCharacters;
-    var expected = mockData.book1.povCharacters;
-    assert.equal(characterFunc(mockData.book1), expected, "should get list of characters from the book")
-    
-    var actorFunc = ExtractDataModule.gameOfThrones.extractActors;
-    var expected = mockData.character1.playedBy;
-    assert.equal(actorFunc(mockData.character1), expected, "should get the name of the actor from the book")
-});
-
-/* --- END ExtractDataModule.gameOfThrones tests --- */
-
-/* --- ExtractDataModule.movieDB --- */
-
-QUnit.test('Test getActorId function', function(assert) {
-    var result = ExtractDataModule.movieDB.getActorId(mockData.actor1);
-    var expected = mockData.actor1.results[0].id;
-    assert.equal(result, expected, 'getActorId returns correct id');
-});
-
-QUnit.test('Test getIMDBLink function', function(assert) {
-    var result = ExtractDataModule.movieDB.getIMDBLink(mockData.actorId);
-    var expected = 'http://imdb.com/name/' + mockData.actorId.imdb_id;
-    assert.equal(result, expected, 'getIMDBLink returns correct link');
-});
+// /* --- ExtractDataModule.gameOfThrones --- */
+//
+// QUnit.test("testing game of throne functions", function(assert) {
+//     var characterFunc = ExtractDataModule.gameOfThrones.extractCharacters;
+//     var expected = mockData.book1.povCharacters;
+//     assert.equal(characterFunc(mockData.book1), expected, "should get list of characters from the book")
+//
+//     var actorFunc = ExtractDataModule.gameOfThrones.extractActors;
+//     var expected = mockData.character1.playedBy;
+//     assert.equal(actorFunc(mockData.character1), expected, "should get the name of the actor from the book")
+// });
+//
+// /* --- END ExtractDataModule.gameOfThrones tests --- */
+//
+// /* --- ExtractDataModule.movieDB --- */
+//
+// QUnit.test('Test getActorId function', function(assert) {
+//     var result = ExtractDataModule.movieDB.getActorId(mockData.actor1);
+//     var expected = mockData.actor1.results[0].id;
+//     assert.equal(result, expected, 'getActorId returns correct id');
+// });
+//
+// QUnit.test('Test getIMDBLink function', function(assert) {
+//     var result = ExtractDataModule.movieDB.getIMDBLink(mockData.actorId);
+//     var expected = 'http://imdb.com/name/' + mockData.actorId.imdb_id;
+//     assert.equal(result, expected, 'getIMDBLink returns correct link');
+// });
 
 /* --- END ExtractDataModule.movieDB tests --- */
+
+
+QUnit.test("test renderIMDbLink returns link", function(assert) {
+    var done = assert.async();
+    var bookItemNode = document.querySelector('#bookList li');
+    bookItemNode.click();
+
+
+    var expected = 'http://imdb.com/name/nm3586035';
+
+    setTimeout(function(){
+        var characterLinkNode = document.querySelector('#characterList a');
+        
+        var result = characterLinkNode.href;
+        assert.equal(result, expected, "should get the name of the actor from the book");
+        done();
+    },2000);
+
+});
