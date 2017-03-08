@@ -172,6 +172,4 @@ var mockData = {
         popularity: 11.683655,
         profile_path: "/7PlTqaeqCNctmHf8UEBjChHID98.jpg"
     }
-
-
 }
