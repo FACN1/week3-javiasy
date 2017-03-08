@@ -1,7 +1,3 @@
-QUnit.test('hello test', function(assert) {
-    assert.ok(1 == '1', 'Passed!');
-});
-
 /* --- RequestModule tests --- */
 
 QUnit.test('test buildURL_GOTBooks function', function(assert){
@@ -42,3 +38,19 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
 });
 
 /* --- END Event Listener tests --- */
+
+/* --- ExtractDataModule.gameOfThrones --- */
+
+QUnit.test("put text here", function(assert) {
+    assert.equal(1, 1, "text goes here")
+});
+
+/* --- END ExtractDataModule.gameOfThrones tests --- */
+
+/* --- ExtractDataModule.movieDB --- */
+
+QUnit.test("put text here", function(assert) {
+    assert.equal(1, 1, "text goes here")
+});
+
+/* --- END ExtractDataModule.movieDB tests --- */
