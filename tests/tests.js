@@ -39,7 +39,6 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
 
 /* --- END Event Listener tests --- */
 
-
 /* --- ExtractDataModule.gameOfThrones --- */
 
 QUnit.test("put text here", function(assert) {
