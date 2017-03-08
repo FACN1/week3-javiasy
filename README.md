@@ -28,6 +28,8 @@
     - make API requests here
 - ExtractDataModule
     - pseudo-code: var extractData {gameOfThrones: functions, movieDatabase: functions}
+- CallbackModule
+    - functions that link the different makeRequest calls together
 - RenderDOMModule
     - render the data as elements on the DOM
 
