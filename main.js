@@ -16,6 +16,12 @@ var ListenerModule = (function(){
         var bookNumber = childNode.getAttribute("data-bookId");
         var url = RequestModule.buildURL_GOTBooks(bookNumber);
 
+        // empty ul element
+        var ulElement = document.getElementById('characterList');
+        while (ulElement.firstChild) {
+            ulElement.removeChild(ulElement.firstChild);
+        }
+
         // kick off callback chain from here
         var callback = CallbackModule.getCharURLs;
         RequestModule.makeRequest(url, callback);
@@ -93,11 +99,28 @@ var CallbackModule = (function() {
         var link = ExtractDataModule.movieDB.getIMDBLink(response);
         // only continue with full imdb links
         if (link !== undefined) {
-            console.log(link);
+            RenderModule.renderIMDbLink(link);
         }
     };
 
     return {
         getCharURLs: getCharURLs
+    }
+})();
+
+var RenderModule = (function() {
+    var renderIMDbLink = function(link) {
+        var charLiNode = document.createElement('li');
+        var charLinkNode = document.createElement('a');
+        charLinkNode.href = link;
+        charLinkNode.textContent = link;
+        charLiNode.appendChild(charLinkNode);
+
+        var ulElement = document.getElementById('characterList');
+        ulElement.appendChild(charLiNode);
+    }
+
+    return {
+        renderIMDbLink: renderIMDbLink
     }
 })();
