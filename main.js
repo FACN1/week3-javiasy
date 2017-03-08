@@ -99,7 +99,9 @@ var CallbackModule = (function() {
             return;
         }
         var link = 'http://imdb.com/name/' + response.imdb_id;
-        RenderModule.renderIMDbLink(link);
+        var name = response.name;
+
+        RenderModule.renderIMDbLink(link, name);
     };
 
     return {
@@ -108,11 +110,11 @@ var CallbackModule = (function() {
 })();
 
 var RenderModule = (function() {
-    var renderIMDbLink = function(link) {
+    var renderIMDbLink = function(link, name) {
         var charLiNode = document.createElement('li');
         var charLinkNode = document.createElement('a');
         charLinkNode.href = link;
-        charLinkNode.textContent = link;
+        charLinkNode.textContent = name;
         charLiNode.appendChild(charLinkNode);
 
         var ulElement = document.getElementById('characterList');
