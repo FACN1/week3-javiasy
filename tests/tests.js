@@ -41,8 +41,11 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
 
 /* --- ExtractDataModule.gameOfThrones --- */
 
-QUnit.test("put text here", function(assert) {
-    assert.equal(1, 1, "text goes here")
+QUnit.test("testing game of throne functions", function(assert) {
+    var characterFunc = ExtractDataModule.gameOfThrones.extractCharacters;
+    var expected = mockData.book1.povCharacters;
+
+    assert.equal(characterFunc(mockData.book1), expected, "should get list of characters")
 });
 
 /* --- END ExtractDataModule.gameOfThrones tests --- */
