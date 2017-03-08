@@ -1,10 +1,10 @@
 var RequestModule = (function() {
     // make an API request
-    function makeRequest(url) {
+    function makeRequest(url, callback) {
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                console.log(JSON.parse(xhr.responseText));
+                callback(JSON.parse(xhr.responseText));
             }
         }
         xhr.open('GET', url);
