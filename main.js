@@ -35,40 +35,6 @@ var ListenerModule = (function(){
     }
 })();
 
-/*// helper functions to extract data from API responses
-var ExtractDataModule = (function() {
-    var gameOfThrones = {
-        extractCharacters: function(response){
-            return response.povCharacters;
-        },
-
-        extractActors: function(response){
-            if (response.playedBy[0] !== undefined) {
-                return response.playedBy[0];
-            }
-        }
-    }
-
-    var movieDB = {
-        // takes name search result output from movieDB request, and returns id
-        getActorId: function(data) {
-            return data.results[0].id;
-        },
-
-        // takes actor id output from movieDB request, and returns IMDb link
-        getIMDBLink: function(data) {
-            if (data.imdb_id !== null) {
-                return 'http://imdb.com/name/' + data.imdb_id;
-            }
-        }
-    }
-
-    return {
-        gameOfThrones: gameOfThrones,
-        movieDB: movieDB
-    }
-})();*/
-
 var CallbackModule = (function() {
     // extracts char URLs from repsonse, and uses them to make requests for actor names
     var getCharURLs = function(response) {
