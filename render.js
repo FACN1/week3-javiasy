@@ -9,6 +9,7 @@ var RenderModule = (function() {
 
         var ulElement = document.getElementById('characterList');
         ulElement.appendChild(charLiNode);
+        document.getElementById('characterList').scrollIntoView();
     }
 
     return {
