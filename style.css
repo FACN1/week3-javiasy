@@ -59,15 +59,9 @@ a{
 
 header {
     min-height: 100vh;
-}
-
-header {
     margin:10px;
     background: #495241;
-}
-
-header p, header h1 {
-    text-align: center;
+	text-align: center;
 }
 
 header h1 {
@@ -75,7 +69,6 @@ header h1 {
     padding-top: 50%;
     padding-bottom: 15%;
 }
-
 
 main li{
     background: #718164;
