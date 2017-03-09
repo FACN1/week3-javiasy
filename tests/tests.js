@@ -18,8 +18,6 @@ QUnit.test('test buildURL_actorInfo function', function(assert){
     assert.equal(result, expected, 'both urls are the same')
 });
 
-/* --- END --- */
-
 /* --- Event listener tests --- */
 
 QUnit.test("test addEventListener for click event on books", function(assert) {
@@ -36,8 +34,6 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
 
     assert.equal(bookClicked, true, "check bookClicked is true, after adding event listener + clicking it");
 });
-
-/* --- END Event Listener tests --- */
 
 // /* --- ExtractDataModule.gameOfThrones --- */
 //
@@ -67,23 +63,18 @@ QUnit.test("test addEventListener for click event on books", function(assert) {
 //     assert.equal(result, expected, 'getIMDBLink returns correct link');
 // });
 
-/* --- END ExtractDataModule.movieDB tests --- */
-
+/* --- RenderModule tests --- */
 
 QUnit.test("test renderIMDbLink returns link", function(assert) {
     var done = assert.async();
     var bookItemNode = document.querySelector('#bookList li');
     bookItemNode.click();
-
-
     var expected = 'http://imdb.com/name/nm3586035';
 
     setTimeout(function(){
         var characterLinkNode = document.querySelector('#characterList a');
-        
         var result = characterLinkNode.href;
         assert.equal(result, expected, "should get the name of the actor from the book");
         done();
     },2000);
-
 });
