@@ -1,6 +1,7 @@
 # week3-javiasy
 
 Click on your favourite GOT book and reveal the list of actors who play the main characters!
+Remember to ask someone from the team for API keys or else this won't work
 
 ## User stories:
 - Want to be able to visit the site and quickly get information on the actors that play the book characters in the TV show.
