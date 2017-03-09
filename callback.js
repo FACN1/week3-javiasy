@@ -3,7 +3,7 @@ var CallbackModule = (function() {
     //call back for addEventListener to get list of character API URLs
     var getURLList = function(book) {
         var bookNumber = book.getAttribute("data-bookId");
-        var url = RequestModule.buildURL_GOTBooks(bookNumber);
+        var url = RequestModule.buildUrl('book', bookNumber);
 
         // empty ul element
         var ulElement = document.getElementById('characterList');
@@ -37,7 +37,7 @@ var CallbackModule = (function() {
             return;
         }
         var actorName = response.playedBy[0];
-        var url = RequestModule.buildURL_actorId(actorName);
+        var url = RequestModule.buildUrl('name', actorName);
         RequestModule.makeRequest(url, getActorId);
     };
 
@@ -48,7 +48,7 @@ var CallbackModule = (function() {
             return;
         }
         var actorId = response.results[0].id;
-        var url = RequestModule.buildURL_actorInfo(actorId);
+        var url = RequestModule.buildUrl('id', actorId);
         RequestModule.makeRequest(url, getIMDbLink);
     };
 
