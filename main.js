@@ -115,6 +115,7 @@ var RenderModule = (function() {
         var charLinkNode = document.createElement('a');
         charLinkNode.href = link;
         charLinkNode.textContent = name;
+        charLinkNode.target = '_blank';
         charLiNode.appendChild(charLinkNode);
 
         var ulElement = document.getElementById('characterList');
