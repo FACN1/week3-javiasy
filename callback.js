@@ -1,4 +1,19 @@
 var CallbackModule = (function() {
+
+    //call back for addEventListener to get list of character API URLs
+    var getURLList = function(book) {
+        var bookNumber = book.getAttribute("data-bookId");
+        var url = RequestModule.buildURL_GOTBooks(bookNumber);
+
+        // empty ul element
+        var ulElement = document.getElementById('characterList');
+        while (ulElement.firstChild) {
+            ulElement.removeChild(ulElement.firstChild);
+        }
+
+        // kick off callback chain from here
+        RequestModule.makeRequest(url, getCharURLs);
+    }
     // extracts char URLs from repsonse, and uses them to make requests for actor names
     var getCharURLs = function(error, response) {
         if (error) {
@@ -53,6 +68,6 @@ var CallbackModule = (function() {
     };
 
     return {
-        getCharURLs: getCharURLs
+        getURLList: getURLList
     }
 })();
