@@ -5,10 +5,7 @@ var ListenerModule = (function(){
         var bookListNode = document.getElementById("bookList");
         bookListNode.childNodes.forEach(function(childNode){
             childNode.addEventListener("click",function(event){
-                // event.preventDefault();
-                setTimeout(function() {
-                    document.getElementById('characterList').scrollIntoView();
-                }, 2000);
+                event.preventDefault();
                 callback(childNode);
             });
         });
@@ -122,6 +119,7 @@ var RenderModule = (function() {
 
         var ulElement = document.getElementById('characterList');
         ulElement.appendChild(charLiNode);
+        document.getElementById('characterList').scrollIntoView();
     }
 
     return {
