@@ -4,10 +4,11 @@ var ListenerModule = (function(){
     // modules to interact with the eventlistener and get the ids of clicked items.
     var initBookListener = function(callback) {
         var bookListNode = document.getElementById("bookList");
-        bookListNode.childNodes.forEach(function(childNode){
-            childNode.addEventListener("click",function(event){
+        bookNodesArray = bookListNode.childNodes;
+        bookNodesArray.forEach(function(book){
+            book.addEventListener("click",function(event){
                 event.preventDefault();
-                callback(childNode);
+                callback(book);
             });
         });
     }; // only run after parallel functions maybe
